@@ -1,4 +1,6 @@
-resume
+My resume in \LaTeX
 ======
 
-Test edit
+* Install LaTex
+* Build :
+	xelatex resume.tex
