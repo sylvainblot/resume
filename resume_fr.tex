@@ -1,0 +1,324 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage[cm]{fullpage}
+
+\usepackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}%A Few Useful Packages
+\usepackage{marvosym}
+\usepackage{fontspec}					%for loading fonts
+ 
+\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\RequirePackage{color,graphicx}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{fullpage} 				%better formatting of the A4 page
+% an alternative to Layaureo can be ** \usepackage{fullpage} **
+\usepackage{supertabular} 				%for Grades
+\usepackage{titlesec}					%custom \section
+\usepackage{multirow}
+
+\usepackage{array}
+%Setup hyperref package, and colours for links
+\usepackage{hyperref}
+
+
+\marginparsep = 0pt
+\marginparwidth = 2pt
+
+\definecolor{linkcolour}{rgb}{0,0.46,0.83}
+
+\hypersetup{pdfauthor=Sylvain Blot,
+			pdfsubject=Resume,
+			colorlinks,breaklinks,urlcolor=linkcolour,
+			linkcolor=linkcolour}
+
+%FONTS
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
+
+
+%CV Sections inspired by: 
+%http://stefano.italians.nl/archives/26
+\titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\color{linkcolour}\titlerule]
+\titlespacing{\section}{0pt}{3pt}{3pt}
+
+\titleformat{\subsection}{\Large\raggedright}{}{0em}{}[]
+\titlespacing{\subsection}{0pt}{3pt}{3pt}
+
+
+%Tweak a bit the top margin
+%\addtolength{\voffset}{-1.3cm}
+
+%Italian hyphenation for the word: ''corporations''
+\hyphenation{im-pre-se}
+
+%-------------WATERMARK TEST [**not part of a CV**]---------------
+%\usepackage[absolute]{textpos}
+
+%\setlength{\TPHorizModule}{30mm}
+%\setlength{\TPVertModule}{\TPHorizModule}
+%\textblockorigin{2mm}{0.65\paperheight}
+%\setlength{\parindent}{0pt}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+\pagestyle{empty} % non-numbered pages
+
+%--------------------TITLE-------------
+%\begin{tabular}[t]{p{7cm}p{10cm}}
+%\Huge \textsc{Sylvain Blot} \\ \huge \textsc{Ingénieur Système} &  \normalsize \textsc{146 boulevard du Montarpasse - 75014 Paris} \\ \Large{\Letter}\large{\href{mailto:sylvain.blot@gmail.com}{sylvain.blot@gmail.com}} \\ \Large{\Telefon} \large{+ 33 6 75 86 87 19}\\ \normalsize \textsc{12 Février 1985 - Permis B} \\
+%\end{tabular}
+
+
+\begin{tabular}[T]{p{5cm}p{9,12cm}p{3cm}}
+ \LARGE{\textsc{Sylvain Blot}}\newline \Large{\textsc{Chef de projet\newline Développement\newline \& Système}} & \normalsize{\textsc{6 rue du Jeu de Paume - 67000 Strasbourg}} \newline \Large{\Letter} \large{\href{mailto:sylvainblot@me.com}{sylvainblot@me.com}} \Large{\Telefon} \large{+ 33 6 75 86 87 19} \newline \normalsize{\textsc{12 Février 1985 - Permis de conduire}}
+\newline \normalsize{\textsc{Français, Anglais, Allemand (bases)}} &\parbox[c]{1em}{\includegraphics[width=0.20\textwidth,angle=0]{sylvain.jpg} }
+\end{tabular}
+%--------------------SECTIONS-----------------------------------
+%Section: Work Experience at the top
+\section{Experiences professionelles}
+%\begin{tabular}{r|p{11cm}}
+\begin{tabular}{p{3,5cm}|p{14,5cm}}	
+
+%FreeLance
+	\emph{Septembre 2013} & \textsc{Chef de projet web, Smile Industries}, Strasbourg \\\textsc{Septembre 2012}&\emph{Développement d'un ERP, CRM, eCommerce. Gestion d'une équipe de 5 développeurs}\\&\footnotesize{Sécurisation de l'existant, amélioriation des performances, versioning, intégration continue, déploiements.}\\\multicolumn{2}{c}{} \\
+
+%FreeLance
+	\emph{Septembre 2012} & \textsc{Freelance Gestion de projet developement}, Strasbourg \\\textsc{July 2011}&\emph{Graphiques boursiers des marchés de matières premières, solution de réservation hotelière}\\&\footnotesize{Django, Drupal, Expression Engine.}\\\multicolumn{2}{c}{} \\
+
+\emph{Juin 2011} & Chef de projet développement web \textsc{SdV Plurimédia}, Strasbourg \\\textsc{Avril 2010}&\emph{Création d'une solution de vente de voyages en ligne.}\\&\footnotesize{Symfony, Drupal, équipe de 4 personnes\hyperlink{sdv}{\hfill | \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
+  
+%Mallyance
+ \emph{Mars 2010} & Ingénieur système et réseaux chez \textsc{Mallyance}, Paris \\\textsc{Septembre 2008}&\emph{Chef de projet technique pour France Télécom - GOA}\\&\footnotesize{Gestion de l'infrastructure du jeu Warhammer Online.\hyperlink{mallyance}{\hfill | \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
+%Prestige
+ \emph{Septembre 2007} & Première expérience chez \textsc{Prestige Réseaux}, Suresnes \\\textsc{Décembre 2006}&\emph{Consultant et formateur Linux}\\&\footnotesize{Formation de partenaires \emph{Novell} à Linux, missions de consulting chez grands comptes.\newline \hyperlink{prestige}{\hfill | \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
+%Supinfo SCT
+ \emph{Juin 2007} & Formateur certifié \textsc{SUPINFO}, Strasbourg \\\textsc{Septembre 2005}&\emph{Formateur en technologies Linux et Sun Solaris}\\&\footnotesize{Formations des élèves d'\emph{ESI Supinfo} (jusqu'à BAC+5) au cours de l'année, présentation, pédagogie, examen, soutenances de projets.\newline \hyperlink{supinfo}{\hfill | \footnotesize Détails}}\\\multicolumn{2}{c}{}
+%\textsc{Summer 2007} & Summer Intern at \textsc{Lehman Brothers}, \emph{Capital Markets}\\&\footnotesize{Received pre-placed offer from the Exotics Trading Desk as a result of very positive review. Rated ``\emph{truly distinctive}'' for Analytical Skills and Teamwork.}
+\end{tabular}
+%Section: Scholarships and additional info
+%\section{Scholarships and Certificates}
+%\begin{tabular}{rl}
+% \textsc{Sept.} 2006 & Scholarship for graduate students with an outstanding curriculum \footnotesize(\EURcr 30,000)\normalsize\\
+%\textsc{June} 2006 & {\textsc{Gmat}\textregistered}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}: 730 (\textsc{q:50;v:39}) 96\textsuperscript{th} percentile; \textsc{awa}: 6.0/6.0 (89\textsuperscript{th} percentile)
+%\end{tabular}
+%Section: Languages
+\section{Compétences et intérêts}
+\begin{tabular}{p{3,5cm}|p{14,5cm}}	
+\textsc{OS} & Mac OS X, Linux, Unix (Solaris, *BSD), Windows\\
+\textsc{Langages} & C, JAVA, Python (PyGTK, wxWidget, QT), Objective C, Shell script (BaSH, Perl), SQL,\LaTeX\\
+\textsc{Langages web} & HTML5, Python Django, PHP5(Symfony, Expression Engine, Drupal), Javascript, CSS\\
+\textsc{Outils} & Versioning (Git, SVN, CVS), OpenSSH, DNS (BIND), LDAP, NFS, OpenSSL, SAMBA, IPTABLES, Kerberos, MySQL, Apache, Fabric, VMWare, VirtualBox\\
+\textsc{Intérêts} & Literature, Raspberry PI hack, Puzzle\\
+\textsc{Sports} & Course à pieds, natation, tennis, football
+\end{tabular}
+
+
+%Section: Education
+\section{Formation}
+%\begin{tabular}{rl}	
+%\begin{tabular}{r|p{11cm}}
+\begin{tabular}{p{3,5cm}|p{14,5cm}}	
+ \textsc{Septembre} 2008 & Master of Science in \textsc{Computer Science} avec \textsc{Félicitations}, \textbf{Oxford Brookes University}, Oxford\\
+ \multirow{3}*{\includegraphics[width=0.15\textwidth]{brookes.pdf}} & Membre de la British Computer Society\\
+& Mémoire: ``Finger tracking Desktop Experience'' | \small Tuteur: Docteur Philip \textsc{Torr}\\
+& Recherches sur le remplacement de la souris par la détection des doigts\\
+& Domaines: systèmes distribués, IA, compilateur, production de logiciels \hyperlink{oxford}{\hfill | \footnotesize Liste des compétences}\\&\\\multicolumn{2}{c}{} \\
+ \textsc{Septembre} 2008 & Titre d'ingénieur en \textsc{Informatique}, \textbf{ESI Supinfo}, Strasbourg\\
+& Expert en systèmes d'information \\
+ & OS : Linux, Microsoft, Apple; Réseaux; Base de données Oracle; Développement \\\multicolumn{2}{c}{} 
+\end{tabular}
+
+%\newpage
+%\hypertarget{gmat}{\textsc{Gmat}\setmainfont{LMRoman10 Regular}\textregistered\setmainfont[SmallCapsFont=Fontin-SmallCaps]{Fontin-Regular}}
+
+%\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
+
+\newpage
+\section{Experiences professionelles}
+\subsection{Chef de projet \textsc{SdV Plurimédia}}
+
+\begin{itemize}
+	\item \hypertarget{sdv}Création de backoffice "User friendly"
+	\begin{itemize}
+		\item Framework PHP Symfony
+		\item Interface dynamique Javascript Jquery
+		\item Parser XML haute performance
+		\item Webservice XML-RPC
+	\end{itemize}
+	\item Création de sites de vente de voyages avec Drupal 6 et 7
+	\begin{itemize}
+		\item Alimenté par le backoffice via webservice
+		\item Dévelopement d'un module de vente temp-réel par webservice
+	\end{itemize}
+\end{itemize}
+
+\bigskip
+\subsection{Chef de projet technique \textsc{GOA, Orange}}
+
+\begin{itemize}
+	\item \hypertarget{mallyance}Gestion transverse d’une équipe de 6 administrateurs réseaux basée en Irlande
+	\begin{itemize}
+		\item Création et attribution des tâches
+		\item Administration de 750 serveurs, 60 univers de jeu
+		\item Documentations
+		\item Formation
+		\item Communication uniquement en anglais.
+	\end{itemize}
+	\item Gestion fonctionnelle du jeu
+	\begin{itemize}
+		\item Ordonnancement des tâches
+		\item Planification et organisation des maintenances du jeu
+		\item Coordination des équipes (QA, Community, SysAdmin)
+		\item Compilation, publication de clients de jeu Windows et Mac
+	\end{itemize}
+	\item Projets secondaires :
+	\begin{itemize}
+		\item Intégration application iPhone
+		\item Sortie du jeu sous Mac OS
+		\begin{itemize}
+			\item Expérience utilisateur
+			\item Création d’installeurs Mac
+		\end{itemize}
+	\end{itemize}
+	\item Technologies :
+	\begin{itemize}
+		\item Patcheur haute disponibilité, loadbalancing
+		\item Base de données MySQL
+		\item Tomcat, Webservices Java
+		\item Scripting: python, bash, dsh, AppleScript, Objective-C
+	\end{itemize}
+\end{itemize}
+
+\bigskip
+\subsection{Consultant et Formateur \textsc{Prestige Réseaux}}
+
+\begin{itemize}
+\item \hypertarget{prestige}Formation
+	\begin{itemize}
+	\item Formation des nouveaux partenaires Novell de l’année 2007 (environ 50 experts)
+	\item Enseignement des cursus Novell Certiﬁed Linux Professional and Engineer
+	\item Obtention des certiﬁcations Linux: Certiﬁed Linux Professional (cours 3071, 3072, 3073), Certiﬁed Linux Engineer (cours 3074, 3075)
+ 	\end{itemize}
+\item Missions de consulting
+	\begin{itemize}
+	\item Virtualisation: Etude comparative de performances entre les solutions Xen et VMWare pour le groupe Lactalis
+	\item Intégration : Spécifications techniques de serveurs SuSE Linux Enterprise Server 10 pour le centre décisionnel informatique de La Poste
+		\begin{itemize}
+		\item Conﬁguration du système
+		\item Sécurité
+		\item Tolérance de panne sur architecture SAN (carte HBA, ﬁber channel)
+		\item Création de repositories RPM personnalisés
+		\end{itemize}
+	\item Participation au déploiement de l’infrastructure mail de l’Elysée lors de la dernière prise de pouvoir
+ 	\end{itemize}
+\item Avant-Vente : Présentation et mise en situation de la distribution SuSE Linux Enterprise Desktop 10 auprès d’Hermès
+ 
+\item Veille technologique
+	\begin{itemize}
+	\item Rédaction de documentations techniques pour l’équipe de consultants
+	\item Etude de mise en production du service d’envoi et de réception de fax Hylafax
+	\item Démarrage réseau de systèmes Linux avec PXE par clients légers
+	\item Annuaire eDirectory
+	\end{itemize}
+\end{itemize}
+
+\bigskip
+
+\subsection{Formateur UNIX/Linux \textsc{Supinfo}}
+
+\begin{itemize}
+	\item \hypertarget{supinfo}Membre du laboratoire des technologies Linux (www.labo-linux.com)
+	\begin{itemize}
+		\item  Responsable de l’équipe recherche
+		\item  Pilotage de 20 personnes pendant 6 mois
+		\item  Stage de 4 mois pour apprendre les techniques de formation, Supinfo Cerfied Trainer
+		\item  Rédaction de supports de cours
+		\item  Méthodologie de création de présentation PowerPoint
+		\item  Prise de parole et animation de classe
+	\end{itemize}
+	\item Enseignement des technologies Linux et Solaris
+	\begin{itemize}
+		\item  Elèves de classe préparatoire jusqu’à Bac+4
+		\item  Linux
+		\begin{itemize}
+			\item  Base de Linux, prise en main du système
+			\item  Administration système et réseaux
+			\item  DHCP, DND, LDAP, IPTABLES, APACHE, MySQL
+		\end{itemize}
+		\item  Solaris
+		\begin{itemize}
+			\item  FHS, disques, paquets, BootROM, SMF, Zones, RBAC, NFS
+		\end{itemize}
+		\item  Création de nombreux supports de cours, travaux pratiques, présentations et questions d’examens
+	\end{itemize}
+	\begin{itemize}
+		\item Création de deux certifications professionnelles pour Mandriva : 
+		\begin{itemize}
+			\item Mandriva Certified User
+			\item Mandriva Certified Administrator
+			\item Comprennant support de cours, présentation, TP et examen
+			\item Equipe de formateurs répartie dans le monde
+			\item Contrôle qualité
+		\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+\bigskip
+
+\subsection{Master in Science in \textsc{Computer Science}}
+\begin{itemize}
+	\item \hypertarget{oxford}Mémoire : Finger Tracking Desktop Experience
+		\begin{itemize}
+			\item Recherche sur le remplacement de la souris par la détection des doigts
+			\item Etude comparative des solutions de traitement d’images
+			\item Choix porté sur l’usage d’une caméra infrarouge, du langage Python et du système d’exploitation Linux et son gestionnaire de fenêtre Gnome.
+			\item Réalisation d’un prototype 100\% fonctionnel permettant :
+			\begin{itemize}
+				\item Avec 2 mains d’utiliser le poste linux
+					\begin{itemize}
+						\item Cliquer, double cliquer, drag and drop…
+					\end{itemize}
+				\item Reconnaissance des mouvements par réseaux de neurones
+					\begin{itemize}
+						\item Déclencher des raccourcis clavier
+						\item Lancer des programmes
+						\item Envoyer des messages au système via le bus de message
+					\end{itemize}
+				\item Interface Graphique en GTK
+					\begin{itemize}
+						\item Configuration des mouvements
+						\item Attacher la caméra au système
+					\end{itemize}
+			\end{itemize}
+			\item Mémoire écrit entièrement en Anglais
+		\end{itemize}
+ 	\item Matières :
+		\begin{itemize}
+			\item Production de logiciels / Project Management
+				\begin{itemize}
+					\item Spécifications techniques
+					\item Cycles de développent
+					\item Suivie de projet
+					\item Nombreux cas pratiques étudiés en Java
+				\end{itemize}
+				\item Systèmes Distribués
+				\begin{itemize}
+					\item Architecture, Sécurité, Virtualisation
+					\item P2P, Corba, MPI, PVM, DFS, SOAP
+					\item Tolérance de panne, GRID computing, Intelligence artificielle
+					\item Réalisation de systèmes distribués en langage C
+				\end{itemize}
+			\item Création de compilateur
+				\begin{itemize}
+					\item Lexer/Parser en Java
+					\item Interpretation µJava
+				\end{itemize}
+			\item Intelligence Artificielle
+				\begin{itemize}
+					\item Systèmes experts
+					\item Data Mining
+					\item Agents d'interface
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+\end{document}
