@@ -1,9 +1,10 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[cm]{fullpage}
 
-\usepackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}%A Few Useful Packages
+\usepackage[top=1cm, bottom=1cm, left=1cm, right=1cm]{geometry}
+%A Few Useful Packages
 \usepackage{marvosym}
-\usepackage{fontspec}					%for loading fonts
+\usepackage{fontspec}%for loading fonts
  
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
 \RequirePackage{color,graphicx}
@@ -20,7 +21,7 @@
 
 
 \marginparsep = 0pt
-\marginparwidth = 2pt
+\marginparwidth = 0pt
 
 \definecolor{linkcolour}{rgb}{0,0.46,0.83}
 
@@ -37,25 +38,18 @@
 %CV Sections inspired by: 
 %http://stefano.italians.nl/archives/26
 \titleformat{\section}{\Large\scshape\raggedright}{}{0em}{}[\color{linkcolour}\titlerule]
-\titlespacing{\section}{0pt}{3pt}{3pt}
+\titlespacing{\section}{0pt}{0pt}{0pt}
 
 \titleformat{\subsection}{\Large\raggedright}{}{0em}{}[]
 \titlespacing{\subsection}{0pt}{3pt}{3pt}
 
 
 %Tweak a bit the top margin
-%\addtolength{\voffset}{-1.3cm}
+\addtolength{\voffset}{0cm}
+\addtolength{\hoffset}{0cm}
 
 %Italian hyphenation for the word: ''corporations''
-\hyphenation{im-pre-se}
-
-%-------------WATERMARK TEST [**not part of a CV**]---------------
-%\usepackage[absolute]{textpos}
-
-%\setlength{\TPHorizModule}{30mm}
-%\setlength{\TPVertModule}{\TPHorizModule}
-%\textblockorigin{2mm}{0.65\paperheight}
-%\setlength{\parindent}{0pt}
+%\hyphenation{im-pre-se}
 
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
@@ -68,50 +62,52 @@
 %\end{tabular}
 
 
-\begin{tabular}[T]{p{5cm}p{9,12cm}p{3cm}}
- \LARGE{\textsc{Sylvain Blot}}\newline \Large{\textsc{Chef de projet\newline Développement\newline \& Système}} & \normalsize{\textsc{23 boulevard d'Arcole - 31000 Toulouse}} \newline \Large{\Letter} \large{\href{mailto:sylvainblot@me.com}{sylvainblot@me.com}} \Large{\Telefon} \large{+ 33 6 75 86 87 19} \newline \normalsize{\textsc{12 Février 1985 - Permis de conduire}}
-\newline \normalsize{\textsc{Français, Anglais, Allemand (bases)}} &\parbox[c]{1em}{\includegraphics[width=0.20\textwidth,angle=0]{sylvain.jpg} }
+\begin{tabular}[T]{p{6cm}p{8cm}p{6cm}}
+ \LARGE{\textsc{Sylvain Blot}} \newline \normalsize{\textsc{96,rue de Cléry - 75002 Paris}} \newline \Large{\Letter} \normalsize{\href{mailto:sylvainblot@me.com}{sylvainblot@me.com}} \newline \Large{\Telefon} \large{+33 6 75 86 87 19} & \LARGE{ \textsc{\newline Developpement \& Système}} &\normalsize{\textsc{12/02/1985 (29 ans)}} \newline \normalsize{\textsc{Célibataire}} \newline \normalsize{\textsc{Permis de conduire B}} \newline \normalsize{\textsc{Français, Anglais}} %&\parbox[c]{1em}{\includegraphics[width=0.20\textwidth,angle=0]{sylvain.jpg} }
 \end{tabular}
 %--------------------SECTIONS-----------------------------------
 %Section: Work Experience at the top
-\section{Experiences professionelles}
+\begin{center}
+Volontaire et passionné par le logiciel libre, je souhaite relever de nouveaux défis et élargir mes compétences. 
+\end{center}
+
+
+\section{Expériences professionelles}
 %\begin{tabular}{r|p{11cm}}
 \begin{tabular}{p{3,5cm}|p{14,5cm}}	
 
-%Buybox
-	\emph{Actuellement} & \textsc{Responsable Informatique, Buybox}, Toulouse \\\textsc{Septembre 2013}&\emph{Solution de paiement en ligne à plusieurs \href{https://www.buybox.net/}{https://www.buybox.net/}.}\\&\footnotesize{Migration des serveurs vers le cloud Amazon Web Services. Développement PHP équipe de 6 personnes.}\\\multicolumn{2}{c}{} \\
+%Bitcoins
+	\emph{Actuellement} & \textsc{Freelance Bitcoin et Crypto-currencies}, Toulouse/Paris \\\textsc{Décembre 2013}&\emph{Lancement de plusieurs altcoins et services associés.}\\&\footnotesize{Python, Django, RabbitMQ, compilation c++ cross-platform, administration système.\hyperlink{bitcoin}{\hfill \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
 
+%Buybox
+	\emph{Novembre 2013} & \textsc{Responsable informatique, Buybox}, Toulouse \\\textsc{Octobre 2013}&\emph{Solution de paiement en ligne à plusieurs \href{https://www.buybox.net/}{https://www.buybox.net/}.}\\&\footnotesize{Migration des serveurs vers le cloud AWS (Amazon Web Services). Architecture, Monitoring, Sauvegarde.\hyperlink{buybox}{\hfill \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
 %Axess
-	\emph{Septembre 2013} & \textsc{Chef de projet web, Smile Industries}, Strasbourg \\\textsc{Septembre 2012}&\emph{Développement d'un ERP, CRM, eCommerce. Gestion d'une équipe de 5 développeurs}\\&\footnotesize{Sécurisation de l'existant, amélioriation des performances, versioning, intégration continue, déploiements.}\\\multicolumn{2}{c}{} \\
+	\emph{Septembre 2013} & \textsc{Chef de projet web, Smile Industries}, Strasbourg \\\textsc{Septembre 2012}&\emph{Développement d'un ERP, CRM, eCommerce. Gestion d'une équipe de 3 développeurs}\\&\footnotesize{Sécurisation de l'existant, amélioriation des performances, versioning, déploiements.\hyperlink{axess}{\hfill \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
 
 %FreeLance
-	\emph{Septembre 2012} & \textsc{Freelance Gestion de projet developement}, Strasbourg \\\textsc{July 2011}&\emph{Graphiques boursiers des marchés de matières premières, solution de réservation hotelière}\\&\footnotesize{Django, Drupal, Expression Engine.}\\\multicolumn{2}{c}{} \\
+	\emph{Septembre 2012} & \textsc{Freelance Gestion de projet developement}, Strasbourg \\\textsc{Juillet 2011}&\emph{Graphiques boursiers des marchés de matières premières, solution de réservation hôtelière}\\&\footnotesize{Django, Drupal, Expression Engine.\hyperlink{freelance}{\hfill \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
 
-\emph{Juin 2011} & Chef de projet développement web \textsc{SdV Plurimédia}, Strasbourg \\\textsc{Avril 2010}&\emph{Création d'une solution de vente de voyages en ligne.}\\&\footnotesize{Symfony, Drupal, équipe de 4 personnes\hyperlink{sdv}{\hfill | \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
+\emph{Juin 2011} & Chef de projet développement web \textsc{SdV Plurimédia}, Strasbourg \\\textsc{Avril 2010}&\emph{Création d'une solution de vente de voyages en ligne.}\\&\footnotesize{symfony, Drupal, équipe de 4 personnes\hyperlink{sdv}{\hfill \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
   
 %Mallyance
- \emph{Mars 2010} & Ingénieur système et réseaux chez \textsc{Mallyance}, Paris \\\textsc{Septembre 2008}&\emph{Chef de projet technique pour France Télécom - GOA}\\&\footnotesize{Gestion de l'infrastructure du jeu Warhammer Online.\hyperlink{mallyance}{\hfill | \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
+ \emph{Mars 2010} & Ingénieur système et réseaux chez \textsc{Mallyance}, Paris \\\textsc{Septembre 2008}&\emph{Chef de projet technique pour France Télécom - GOA}\\&\footnotesize{Gestion fonctionelle du jeu Warhammer Online Europe. 500 serveurs. \hyperlink{mallyance}{\hfill \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
+
 %Prestige
- \emph{Septembre 2007} & Première expérience chez \textsc{Prestige Réseaux}, Suresnes \\\textsc{Décembre 2006}&\emph{Consultant et formateur Linux}\\&\footnotesize{Formation de partenaires \emph{Novell} à Linux, missions de consulting chez grands comptes.\newline \hyperlink{prestige}{\hfill | \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
+ \emph{Septembre 2007} & Consultant et formateur Linux chez \textsc{Prestige Réseaux}, Suresnes \\\textsc{Décembre 2006}&\emph{Première expérience professionelle}\\&\footnotesize{Formation de partenaires \emph{Novell} à Linux, missions de consulting. \hyperlink{prestige}{\hfill \footnotesize Détails}}\\\multicolumn{2}{c}{} \\
+
 %Supinfo SCT
- %\emph{Juin 2007} & Formateur certifié \textsc{SUPINFO}, Strasbourg \\\textsc{Septembre 2005}&\emph{Formateur en technologies Linux et Sun Solaris}\\&\footnotesize{Formations des élèves d'\emph{ESI Supinfo} (jusqu'à BAC+5) au cours de l'année, présentation, pédagogie, examen, soutenances de projets.\newline \hyperlink{supinfo}{\hfill | \footnotesize Détails}}\\\multicolumn{2}{c}{}
+ \emph{Juin 2007} & Formateur certifié \textsc{SUPINFO}, Strasbourg \\\textsc{Septembre 2005}&\emph{Formateur en technologies Linux et Sun Solaris}\\&\footnotesize{Création de présentations, examen, soutenances de projets. \hyperlink{supinfo}{\hfill \footnotesize Détails}}\\\multicolumn{2}{c}{}
 %\textsc{Summer 2007} & Summer Intern at \textsc{Lehman Brothers}, \emph{Capital Markets}\\&\footnotesize{Received pre-placed offer from the Exotics Trading Desk as a result of very positive review. Rated ``\emph{truly distinctive}'' for Analytical Skills and Teamwork.}
 \end{tabular}
-%Section: Scholarships and additional info
-%\section{Scholarships and Certificates}
-%\begin{tabular}{rl}
-% \textsc{Sept.} 2006 & Scholarship for graduate students with an outstanding curriculum \footnotesize(\EURcr 30,000)\normalsize\\
-%\textsc{June} 2006 & {\textsc{Gmat}\textregistered}\setmainfont[SmallCapsFont=Fontin SmallCaps]{Fontin-Regular}: 730 (\textsc{q:50;v:39}) 96\textsuperscript{th} percentile; \textsc{awa}: 6.0/6.0 (89\textsuperscript{th} percentile)
-%\end{tabular}
-%Section: Languages
+
 \section{Compétences et intérêts}
 \begin{tabular}{p{3,5cm}|p{14,5cm}}	
-\textsc{OS} & Mac OS X, Linux, Unix (Solaris, *BSD), Windows\\
-\textsc{Langages} & C, JAVA, Python (PyGTK, wxWidget, QT), Objective C, Shell script (BaSH, Perl), SQL,\LaTeX\\
-\textsc{Langages web} & HTML5, Python Django, PHP5(Symfony, Expression Engine, Drupal), Javascript, CSS\\
-\textsc{Outils} & Cloud Amazon Web Services (EC2, S3, Elastic Load Balancer, RDS...), Versioning (Git, SVN, CVS), OpenSSH, DNS (BIND), LDAP, NFS, OpenSSL, SAMBA, IPTABLES, Kerberos, MySQL, Apache, Fabric, VMWare, VirtualBox\\
-\textsc{Intérêts} & Literature, Raspberry PI hack, Puzzle\\
-\textsc{Sports} & Course à pieds, natation, tennis, football
+\textsc{Certifications} & Novell Enterprise Linux Professional \& Engineer, Mandriva Certified Trainer\\
+\textsc{OS} & Mac OS X, Linux, Unix\\
+\textsc{Langages} & Python (Django, PyGTK, wxWidget), PHP5(symfony, Expression Engine, Drupal), Shell script (BaSH, Perl), SQL, HTML, Javascript, CSS, \LaTeX\\
+\textsc{Outils} & Chef, Cloud Amazon Web Services (Opswork, EC2, S3, ELB, RDS...), Versioning (Git, SVN, CVS), DNS (BIND), LDAP, NFS, SAMBA, IPTABLES, MySQL, Apache, Nginx, Fabric, VMWare\\
+\textsc{Intérêts} & Littérature, Raspberry PI hack, Open-Source, Puzzle\\
+\textsc{Sports} & Billard Français, Course à pied
 \end{tabular}
 
 
@@ -124,10 +120,10 @@
  \multirow{3}*{\includegraphics[width=0.15\textwidth]{brookes.pdf}} & Membre de la British Computer Society\\
 & Mémoire: ``Finger tracking Desktop Experience'' | \small Tuteur: Docteur Philip \textsc{Torr}\\
 & Recherches sur le remplacement de la souris par la détection des doigts\\
-& Domaines: systèmes distribués, IA, compilateur, production de logiciels \hyperlink{oxford}{\hfill | \footnotesize Liste des compétences}\\&\\\multicolumn{2}{c}{} \\
+& Domaines: systèmes distribués, IA, compilateur, production de logiciels \\ \\
  \textsc{Septembre} 2008 & Titre d'ingénieur en \textsc{Informatique}, \textbf{ESI Supinfo}, Strasbourg\\
 & Expert en systèmes d'information \\
- & OS : Linux, Microsoft, Apple; Réseaux; Base de données Oracle; Développement \\\multicolumn{2}{c}{} 
+ & OS : Linux, Microsoft, Apple, Développement, Base de données \\
 \end{tabular}
 
 %\newpage
@@ -136,31 +132,150 @@
 %\XeTeXpdffile ''GMAT.pdf'' page 1 scaled 800
 
 \newpage
-\section{Experiences professionelles}
+\section{Détail des expériences professionelles}
+\subsection{Freelance Bitcoin et Crypto-currencies}
+	
+\begin{itemize}
+	\item \hypertarget{bitcoin}Création d'un générateur d'altcoin
+	\begin{itemize}
+		\item Site développé avec \textbf{Django}
+		\item Message passing avec \textbf{RabbitMQ}
+		\item Compilation asynchrone du serveur et des wallets
+		\item Payment en bitcoins
+	\end{itemize}
+	\item Lancement de plusieurs altcoins.
+	\item Compilation personalisation de wallets QT Linux, Windows, MacOS
+	\item Réalisation de bot IRC Python avec Willie
+	\item Mise en place de mining pool exemple: \href{http://logosmining.com/}{http://logosmining.com/}
+	\item Explorateur de blocks
+	\item Gestion des serveurs de jeu pour \href{http://leetcoin.com/}{http://leetcoin.com/}
+	\begin{itemize}
+		\item Counter strike source, Team fortress 2
+		\item Migration vers AWS avec opswork
+	\end{itemize}
+	\item Gestion du code avec \textbf{Git}.
+\end{itemize}
+
+
+\subsection{Responsable informatique \textsc{buybox}}
+	
+\begin{itemize}
+	\item \hypertarget{buybox}Migration du service dans le cloud d'Amazon \textbf{AWS}
+	\begin{itemize}
+		\item Gestion des coûts, instances et réservation
+		\item RDS
+		\item Gestion de configuration avec \textbf{Chef server}
+		\item Provisionning des instances EC2
+		\item Route 53
+		\item Backup dans bucket S3
+		\item Elastic Load Balancer
+		\item Gestion des certificats SSL
+	\end{itemize}
+	\item Scripting BaSH
+	\item Monitoring avec \textbf{Zabbix}
+	\item Versionning du code sous \textbf{git}
+	\item Merge request et déploiement par webhook avec \textbf{gitlab}
+	\item Mise en place de liaisons VPN Ipsec
+	\item Code en \textbf{PHP}, parties réalisées avec le framework Sylex
+	\item Bugtracking et organisation avec \textbf{Redmine}
+	\item Environnement de développement avec Vagrant, Provisioning avec \textbf{Chef}, \textbf{ngrok}
+\end{itemize}
+
+\subsection{Chef de projet \textsc{Axess Industrie}}
+\begin{itemize}
+	\item \hypertarget{axess}Gestion d'une équipe de \textbf{3 développeurs} Cycle en V
+	\item Base de code \textbf{PHP} en développement depuis de 8ans
+	\item Relation quotidienne avec la direction et le marketing pour formaliser les besoins
+	\item Sécurisation du code existant
+	\item \textbf{Amélioriation des performances}, APC, Couche d'accès à la base de données
+	\item Versioning via Subversion
+	\item Scripts de déploiement
+	\item Gestion d'une base produit de plus de 50 000 références
+	\item Gestion des devis, commandes, envoi PDF
+	\item Logistiques, gestion du stock et du suivi des transports
+	\item Liaisons webservices
+	\begin{itemize}
+		\item Avec la Poste pour l'envoi de courriers : factures, relances...
+		\item Assurance crédit
+		\item Societes.com pour enrichir les fiches clients, prospects
+		\item Flux shopping : Google Merchant, Entrepros ...
+	\end{itemize}
+	\item Suivi et participation à la réalisation des tâches
+	\item Mise en place de l'ecotaxe
+	\item Bugtracking avec \textbf{Redmine}
+	\begin{itemize}
+		\item Possibilité de rapporter des bugs depuis le backoffice via API
+		\item FeedbackJS réalisation et transmission d'une capture d'écran de la page via canvas
+	\end{itemize}
+\end{itemize}
+
+
+\subsection{\textsc{Freelance}}
+\begin{itemize}
+	\item \hypertarget{freelance}Participation à de nombreux projets web
+	\item Création d'un reddit like centré sur les politiciens, \textbf{Django, MySQL}.
+	\item Co-Réalisation d'un site d'information sur les matières premières
+	\begin{itemize}
+		\item Création de graphiques boursiers avec highchart
+		\item Webservices boursiers Xignite
+		\item Système de paiement/abonnement avec Ogone
+	\end{itemize}
+
+	\item Réalisé sous le CMS Expression Engine (contributeur)
+	\begin{itemize}
+			\item Systèmes de réservations hôteliers : Prix/disponibilités, Recherche, Réservation, Paiement CM-CIC.
+			\item Module d'import d'actualité multicanaux
+	\end{itemize}
+
+	\item Drupal
+	\begin{itemize}
+			\item Contribution au module Ubercart uchotel
+			\begin{itemize}
+				\item Correction du système de dates
+				\item Passage de Drupal 6 à Drupal 7
+			\end{itemize}
+	\end{itemize}
+	\item Axess Industries réalisation d'un audit de code PHP
+\end{itemize}
+
+\bigskip
 \subsection{Chef de projet \textsc{SdV Plurimédia}}
 
 \begin{itemize}
-	\item \hypertarget{sdv}Création de backoffice "User friendly"
+	\item \hypertarget{sdv}Trac, bugtracking
+
+	\item Représentation de la société au consortium XFT (Exchange for Travel)
+
+	\item Création de backoffice ”User friendly”
 	\begin{itemize}
-		\item Framework PHP Symfony
-		\item Interface dynamique Javascript Jquery
-		\item Parser XML haute performance
-		\item Webservice XML-RPC
+			\item Framework PHP symfony
+			\item Interface dynamique Javascript Jquery
+			\item Dashboard drag and drop
+			\item Enrichissement des fiches voyages
+			\item Prix disponibilité
+			\item Volume considérable d'informations à synchroniser
+			\begin{itemize}
+				\item Réalisation d'un parser XML hautes performance
+				\item Parsing SAX
+				\item Finite-State Machine
+			\end{itemize}
+			\item Webservice XML-RPC de communication entre le backoffice et les frontaux Drupal
 	\end{itemize}
+
 	\item Création de sites de vente de voyages avec Drupal 6 et 7
 	\begin{itemize}
-		\item Alimenté par le backoffice via webservice
-		\item Dévelopement d'un module de vente temp-réel par webservice
+			\item Alimenté par le backoffice via webservice
+			\item Dévelopement d’un module de vente temp-réel par webservice
+			\item Réalisations de divers modules
 	\end{itemize}
 \end{itemize}
 
 \bigskip
-\subsection{Chef de projet technique \textsc{GOA, Orange}}
+\subsection{Chef de projet technique en binôme \textsc{GOA, Orange}}
 
 \begin{itemize}
-	\item \hypertarget{mallyance}Gestion transverse d’une équipe de 6 administrateurs réseaux basée en Irlande
+	\item \hypertarget{mallyance}Création des tâches pour les administrateurs systèmes
 	\begin{itemize}
-		\item Création et attribution des tâches
 		\item Administration de 750 serveurs, 60 univers de jeu
 		\item Documentations
 		\item Formation
@@ -173,15 +288,7 @@
 		\item Coordination des équipes (QA, Community, SysAdmin)
 		\item Compilation, publication de clients de jeu Windows et Mac
 	\end{itemize}
-	\item Projets secondaires :
-	\begin{itemize}
-		\item Intégration application iPhone
-		\item Sortie du jeu sous Mac OS
-		\begin{itemize}
-			\item Expérience utilisateur
-			\item Création d’installeurs Mac
-		\end{itemize}
-	\end{itemize}
+	\item Projets secondaires : Intégration application iPhone Europe, Sortie du jeu sous Mac OS.
 	\item Technologies :
 	\begin{itemize}
 		\item Patcheur haute disponibilité, loadbalancing
@@ -192,36 +299,28 @@
 \end{itemize}
 
 \bigskip
-\newpage
 \subsection{Consultant et Formateur \textsc{Prestige Réseaux}}
 
 \begin{itemize}
 \item \hypertarget{prestige}Formation
 	\begin{itemize}
-	\item Formation des nouveaux partenaires Novell de l’année 2007 (environ 50 experts)
+	\item Formation des nouveaux partenaires Novell de l’année 2007
 	\item Enseignement des cursus Novell Certiﬁed Linux Professional and Engineer
 	\item Obtention des certiﬁcations Linux: Certiﬁed Linux Professional (cours 3071, 3072, 3073), Certiﬁed Linux Engineer (cours 3074, 3075)
  	\end{itemize}
 \item Missions de consulting
 	\begin{itemize}
 	\item Virtualisation: Etude comparative de performances entre les solutions Xen et VMWare pour le groupe Lactalis
-	\item Intégration : Spécifications techniques de serveurs SuSE Linux Enterprise Server 10 pour le centre décisionnel informatique de La Poste
-		\begin{itemize}
-		\item Conﬁguration du système
-		\item Sécurité
-		\item Tolérance de panne sur architecture SAN (carte HBA, ﬁber channel)
-		\item Création de repositories RPM personnalisés
-		\end{itemize}
-	\item Participation au déploiement de l’infrastructure mail de l’Elysée lors de la dernière prise de pouvoir
+	\item Intégration : Spécifications techniques de serveurs SuSE Linux Enterprise Server 10 pour le centre décisionnel informatique de La Poste. Conﬁguration du système, Sécurité , Tolérance de panne sur architecture SAN (carte HBA, ﬁber channel), Création de repositories RPM personnalisés.
  	\end{itemize}
-\item Avant-Vente : Présentation et mise en situation de la distribution SuSE Linux Enterprise Desktop 10 auprès d’Hermès
+\item Avant-Vente : Présentation et mise en situation de la distribution SuSE Linux Enterprise Desktop 10
  
 \item Veille technologique
 	\begin{itemize}
-	\item Rédaction de documentations techniques pour l’équipe de consultants
-	\item Etude de mise en production du service d’envoi et de réception de fax Hylafax
-	\item Démarrage réseau de systèmes Linux avec PXE par clients légers
-	\item Annuaire eDirectory
+		\item Rédaction de documentations techniques pour l’équipe de consultants
+		\item Etude de mise en production du service d’envoi et de réception de fax Hylafax
+		\item Démarrage réseau de systèmes Linux avec PXE par clients légers
+		\item Annuaire eDirectory
 	\end{itemize}
 \end{itemize}
 
@@ -232,98 +331,69 @@
 \begin{itemize}
 	\item \hypertarget{supinfo}Membre du laboratoire des technologies Linux (www.labo-linux.com)
 	\begin{itemize}
-		\item  Responsable de l’équipe recherche
-		\item  Pilotage de 20 personnes pendant 6 mois
-		\item  Stage de 4 mois pour apprendre les techniques de formation, Supinfo Cerfied Trainer
-		\item  Rédaction de supports de cours
-		\item  Méthodologie de création de présentation PowerPoint
-		\item  Prise de parole et animation de classe
+		\item Stage de 4 mois pour apprendre les techniques de formation, Supinfo Certified Trainer
+		\item Création de supports de cours, travaux pratiques, présentations et questions d’examens
+		\item Collaboration à la création des certifiactions: Mandriva Certified User \& Administrator
 	\end{itemize}
-	\item Enseignement des technologies Linux et Solaris
-	\begin{itemize}
-		\item  Elèves de classe préparatoire jusqu’à Bac+4
-		\item  Linux
-		\begin{itemize}
-			\item  Base de Linux, prise en main du système
-			\item  Administration système et réseaux
-			\item  DHCP, DND, LDAP, IPTABLES, APACHE, MySQL
-		\end{itemize}
-		\item  Solaris
-		\begin{itemize}
-			\item  FHS, disques, paquets, BootROM, SMF, Zones, RBAC, NFS
-		\end{itemize}
-		\item  Création de nombreux supports de cours, travaux pratiques, présentations et questions d’examens
-	\end{itemize}
-	\begin{itemize}
-		\item Création de deux certifications professionnelles pour Mandriva : 
-		\begin{itemize}
-			\item Mandriva Certified User
-			\item Mandriva Certified Administrator
-			\item Comprennant support de cours, présentation, TP et examen
-			\item Equipe de formateurs répartie dans le monde
-			\item Contrôle qualité
-		\end{itemize}
-		\end{itemize}
 \end{itemize}
 
 \bigskip
 \newpage
 
-\subsection{Master in Science in \textsc{Computer Science}}
-\begin{itemize}
-	\item \hypertarget{oxford}Mémoire : Finger Tracking Desktop Experience
-		\begin{itemize}
-			\item Recherche sur le remplacement de la souris par la détection des doigts
-			\item Etude comparative des solutions de traitement d’images
-			\item Choix porté sur l’usage d’une caméra infrarouge, du langage Python et du système d’exploitation Linux et son gestionnaire de fenêtre Gnome.
-			\item Réalisation d’un prototype 100\% fonctionnel permettant :
-			\begin{itemize}
-				\item Avec 2 mains d’utiliser le poste linux
-					\begin{itemize}
-						\item Cliquer, double cliquer, drag and drop…
-					\end{itemize}
-				\item Reconnaissance des mouvements par réseaux de neurones
-					\begin{itemize}
-						\item Déclencher des raccourcis clavier
-						\item Lancer des programmes
-						\item Envoyer des messages au système via le bus de message
-					\end{itemize}
-				\item Interface Graphique en GTK
-					\begin{itemize}
-						\item Configuration des mouvements
-						\item Attacher la caméra au système
-					\end{itemize}
-			\end{itemize}
-			\item Mémoire écrit entièrement en Anglais
-		\end{itemize}
- 	\item Matières :
-		\begin{itemize}
-			\item Production de logiciels / Project Management
-				\begin{itemize}
-					\item Spécifications techniques
-					\item Cycles de développent
-					\item Suivie de projet
-					\item Nombreux cas pratiques étudiés en Java
-				\end{itemize}
-				\item Systèmes Distribués
-				\begin{itemize}
-					\item Architecture, Sécurité, Virtualisation
-					\item P2P, Corba, MPI, PVM, DFS, SOAP
-					\item Tolérance de panne, GRID computing, Intelligence artificielle
-					\item Réalisation de systèmes distribués en langage C
-				\end{itemize}
-			\item Création de compilateur
-				\begin{itemize}
-					\item Lexer/Parser en Java
-					\item Interpretation µJava
-				\end{itemize}
-			\item Intelligence Artificielle
-				\begin{itemize}
-					\item Systèmes experts
-					\item Data Mining
-					\item Agents d'interface
-				\end{itemize}
-		\end{itemize}
-\end{itemize}
+%\subsection{Master in Science in \textsc{Computer Science}}
+%\begin{itemize}
+%	\item \hypertarget{oxford}Mémoire : Finger Tracking Desktop Experience
+%		\begin{itemize}
+%			\item Recherche sur le remplacement de la souris par la détection des doigts
+%			\item Etude comparative des solutions de traitement d’images
+%			\item Choix porté sur l’usage d’une caméra infrarouge, du langage Python et du système d’exploitation Linux et son gestionnaire de fenêtre Gnome.
+%			\item Réalisation d’un prototype 100\% fonctionnel permettant :
+%			\begin{itemize}
+%				\item Avec 2 mains d’utiliser le poste de travail
+%					\begin{itemize}
+%						\item Cliquer, double cliquer, drag and drop…
+%					\end{itemize}
+%				\item Reconnaissance des mouvements par réseaux de neurones
+%					\begin{itemize}
+%						\item Déclencher des raccourcis clavier
+%						\item Lancer des programmes
+%						\item Envoyer des messages au système via le bus de message
+%					\end{itemize}
+%				\item Interface Graphique en GTK
+%					\begin{itemize}
+%						\item Configuration des mouvements
+%						\item Attacher la caméra au système
+%					\end{itemize}
+%			\end{itemize}
+%			\item Mémoire écrit entièrement en Anglais
+%		\end{itemize}
+% 	\item Matières :
+%		\begin{itemize}
+%			\item Production de logiciels / Project Management
+%				\begin{itemize}
+%					\item Spécifications techniques
+%					\item Cycles de développent
+%					\item Suivie de projet
+%					\item Nombreux cas pratiques étudiés en Java
+%				\end{itemize}
+%				\item Systèmes Distribués
+%				\begin{itemize}
+%					\item Architecture, Sécurité, Virtualisation
+%					\item P2P, Corba, MPI, PVM, DFS, SOAP
+%					\item Tolérance de panne, GRID computing, Intelligence artificielle
+%					\item Réalisation de systèmes distribués en langage C
+%				\end{itemize}
+%			\item Création de compilateur
+%				\begin{itemize}
+%					\item Lexer/Parser en Java
+%					\item Interpretation µJava
+%				\end{itemize}
+%			\item Intelligence Artificielle
+%				\begin{itemize}
+%					\item Systèmes experts
+%					\item Data Mining
+%				\end{itemize}
+%		\end{itemize}
+%\end{itemize}
 
 \end{document}
